@@ -12,6 +12,7 @@
         "no-consecutive-blank-lines": false,
         "no-var-requires": false,
         "no-empty": false,
+        "object-literal-sort-keys": false,
         "interface-name": false,
         "no-console": {
             "severity": "warning",

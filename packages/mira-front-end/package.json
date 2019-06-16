@@ -1,0 +1,56 @@
+{
+  "name": "mira-front-end",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Dat Do (dat.b.do@gmail.com)",
+  "main": "public/electron.js",
+  "build": {
+    "appId": "com.datdo.mira",
+    "mac": {
+      "category": "creativity"
+    }
+  },
+  "dependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.8",
+    "@types/react": "16.8.20",
+    "@types/react-dom": "16.8.4",
+    "electron-is-dev": "^1.1.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "typescript": "3.5.0-rc"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^5.0.4",
+    "electron-builder": "^20.43.0",
+    "tslint": "^5.17.0",
+    "wait-on": "^3.2.0"
+  }
+}

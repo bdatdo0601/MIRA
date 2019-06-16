@@ -1,0 +1,80 @@
+.calendar {
+  border-radius: 10px;
+  padding: 100px;
+  font-size: 1.8em;
+
+  &-month {
+    width: 500px;
+    user-select: none;
+
+    &_header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-week,
+  &-days_of_week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &-day,
+  &-days_of_week_day {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0.5;
+    color: white;
+  }
+
+  &-day {
+    font-size: 0.6em;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+
+    &.is-selectable {
+      cursor: pointer;
+    }
+
+    &.is-disabled {
+      background: #525151;
+    }
+
+    &.is-current_month {
+      opacity: 1;
+    }
+
+    &.is-selected {
+      background: green;
+
+      &.is-start_selection {
+        background: red;
+      }
+
+      &.is-end_selection {
+        background: blue;
+      }
+    }
+  }
+
+  &-header_button {
+    width: 100px;
+    border-color: transparent;
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    &.is-prev:before {
+      content: "<";
+    }
+
+    &.is-next:before {
+      content: ">";
+    }
+  }
+}
